@@ -1,0 +1,89 @@
+Sure, here are Python programs for each of the tasks you mentioned:
+
+1. Python Program to Display Fibonacci Sequence Using Recursion:
+
+```python
+def fibonacci(n):
+    if n <= 0:
+        return []
+    elif n == 1:
+        return [0]
+    elif n == 2:
+        return [0, 1]
+    else:
+        fib_sequence = fibonacci(n - 1)
+        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])
+        return fib_sequence
+
+n = int(input("Enter the number of terms: "))
+if n <= 0:
+    print("Please enter a positive integer.")
+else:
+    fib_sequence = fibonacci(n)
+    print("Fibonacci Sequence:")
+    print(fib_sequence)
+```
+
+2. Python Program to Find Factorial of Number Using Recursion:
+
+```python
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+num = int(input("Enter a non-negative integer: "))
+if num < 0:
+    print("Factorial is not defined for negative numbers.")
+else:
+    result = factorial(num)
+    print(f"Factorial of {num} is {result}")
+```
+
+3. Python Program to Calculate Your Body Mass Index (BMI):
+
+```python
+def calculate_bmi(weight, height):
+    return weight / (height ** 2)
+
+weight = float(input("Enter your weight in kilograms: "))
+height = float(input("Enter your height in meters: "))
+
+if weight <= 0 or height <= 0:
+    print("Invalid input. Please enter positive values for weight and height.")
+else:
+    bmi = calculate_bmi(weight, height)
+    print(f"Your BMI is: {bmi:.2f}")
+```
+
+4. Python Program to Calculate the Natural Logarithm of Any Number:
+
+```python
+import math
+
+number = float(input("Enter a positive number: "))
+
+if number <= 0:
+    print("Please enter a positive number.")
+else:
+    natural_log = math.log(number)
+    print(f"The natural logarithm of {number} is {natural_log:.2f}")
+```
+
+5. Python Program for Cube Sum of First n Natural Numbers:
+
+```python
+def cube_sum(n):
+    return sum([i ** 3 for i in range(1, n + 1)])
+
+n = int(input("Enter a positive integer (n): "))
+
+if n <= 0:
+    print("Please enter a positive integer.")
+else:
+    result = cube_sum(n)
+    print(f"The cube sum of the first {n} natural numbers is {result}")
+```
+
+You can run these programs in a Python environment to perform the respective tasks.
